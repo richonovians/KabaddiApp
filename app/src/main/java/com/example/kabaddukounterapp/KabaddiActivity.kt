@@ -12,9 +12,6 @@ import androidx.lifecycle.ViewModel
 
 class KabaddiActivity : AppCompatActivity() {
 
-//    var scoreA: Int = 0
-//    var scoreB: Int = 0
-
     private lateinit var  tvScoreA: TextView
     private lateinit var  tvScoreB: TextView
 
