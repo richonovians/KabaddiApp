@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="scoreViewModel"
+            type="com.example.kabaddukounterapp.ScoreViewModel" />
+    </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -22,7 +28,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="KabaddiKounter"
+            android:text="Kabaddi Kounter"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold"/>
@@ -48,7 +54,7 @@
         android:id="@+id/team_a_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
+        android:text="@{Integer.toString(scoreViewModel.scoreA)}"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/team_a_label"
@@ -103,7 +109,7 @@
         android:id="@+id/team_b_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
+        android:text="@{Integer.toString(scoreViewModel.scoreB)}"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/team_b_label"
@@ -147,3 +153,4 @@
         app:layout_constraintVertical_bias="0.222" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
